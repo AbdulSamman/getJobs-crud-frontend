@@ -4,11 +4,15 @@ export interface IAppProvider {
   }
 
   export interface IAppContext {
-title:string
+title:string,
+rawJobs:IJobRaw[],
+rawSkills: { [key: string]: IRawSkill };
+
   }
 
 
-  export interface IJobRaw  {
+
+export interface IJobRaw  {
     id:number,
     title:string,
     company:string,
@@ -17,4 +21,12 @@ title:string
     skillList:string,
     publicationDate:string,
 
-    }
+}
+
+
+export  interface IRawSkill {
+idCode:string,
+    name:string,
+    url:string,
+    description:string
+}
