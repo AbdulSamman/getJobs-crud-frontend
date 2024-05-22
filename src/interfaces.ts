@@ -20,8 +20,11 @@ export interface IJobRaw  {
     description:string,
     skillList:string,
     publicationDate:string,
-
+    skills:IRawSkill[]
 }
+
+
+
 
 
 export  interface IRawSkill {

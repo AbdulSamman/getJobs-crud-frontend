@@ -4,24 +4,94 @@ body {
   color: #ccc;
   a {
     text-decoration: none;
-    color: gold;
+
+    color: rgb(209, 168, 85);
   }
   nav {
     background-color: #222;
     padding: 0.5rem;
-    font-size: 1.2rem;
+
     a {
-      color: #ccc;
+      color: #aaa;
       text-decoration: none;
-      padding-right: 10px;
+      margin-right: 1rem;
     }
+
     a.active {
-      color: rgb(245, 245, 61);
+      color: rgb(211, 211, 110);
     }
   }
   .pageJobs,
   .pageSkills,
   .pageDashboard {
     padding: 0 0.5rem;
+  }
+  .pageJobs {
+    .jobs {
+      .job {
+        background-color: #222;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        div {
+          margin-bottom: 0.5rem;
+        }
+
+        .title {
+          a {
+            color: rgb(176, 146, 91);
+            font-size: 1.5rem;
+          }
+        }
+
+        .company {
+          color: rgb(208, 208, 114);
+        }
+
+        .description {
+          font-style: italic;
+          color: #999;
+        }
+
+        .skills {
+          .skill {
+            font-family: "Courier New", Courier, monospace;
+          }
+          .found {
+            color: green;
+            background-color: rgb(21, 51, 16);
+            a {
+              color: rgb(114, 208, 114);
+              text-decoration: underline;
+            }
+          }
+          .missing {
+            color: red;
+            background-color: rgb(62, 31, 25);
+
+            display: flex;
+            align-items: end;
+
+            a {
+              color: rgb(210, 77, 77);
+              text-decoration: underline;
+            }
+          }
+          .name {
+            margin: 0;
+            padding: 5px;
+          }
+        }
+
+        .todo {
+          color: yellow;
+          background-color: #111;
+          padding: 0.4rem;
+          font-family: "Courier New", Courier, monospace;
+          display: inline-block;
+          border-radius: 0.4rem;
+        }
+      }
+    }
   }
 }
