@@ -6,7 +6,6 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
-const title = "hello";
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
   const [rawJobs, setRawJobs] = useState<IJobRaw[]>([]);
   const [rawSkills, setRawSkills] = useState<{ [key: string]: IRawSkill }>({});
@@ -30,7 +29,6 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        title,
         rawJobs,
         rawSkills,
       }}>

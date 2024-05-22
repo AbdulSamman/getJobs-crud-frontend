@@ -3,8 +3,8 @@ export interface IAppProvider {
 
   }
 
-  export interface IAppContext {
-title:string,
+export interface IAppContext {
+
 rawJobs:IJobRaw[],
 rawSkills: { [key: string]: IRawSkill };
 
