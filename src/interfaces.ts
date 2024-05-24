@@ -7,7 +7,8 @@ export interface IAppContext {
 
 rawJobs:IJobRaw[],
 rawSkills: { [key: string]: IRawSkill };
-
+jobsLowdb:IJobRaw[]
+deleteJob:(jobsLowdb:IJobRaw)=>void
   }
 
 
@@ -20,16 +21,25 @@ export interface IJobRaw  {
     description:string,
     skillList:string,
     publicationDate:string,
-    skills:IRawSkill[]
+    skills:IRawSkill[],
+    toDo:{
+      text:string,
+      url:string
+    }
 }
 
 
 
 
 
+
 export  interface IRawSkill {
-idCode:string,
+    idCode:string,
     name:string,
     url:string,
     description:string
+}
+
+export interface ISkill extends IRawSkill {
+  isOpen:boolean
 }

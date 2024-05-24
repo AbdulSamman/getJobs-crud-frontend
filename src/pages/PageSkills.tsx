@@ -3,6 +3,7 @@ import { useContext } from "react";
 
 export const PageSkills = () => {
   const { rawSkills } = useContext(AppContext);
+
   return (
     <div className="pageSkills">
       <div className="skills">

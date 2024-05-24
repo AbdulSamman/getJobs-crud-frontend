@@ -21,16 +21,21 @@ body {
       color: rgb(211, 211, 110);
     }
   }
-  .pageJobs,
-  .pageSkills,
-  .pageDashboard {
-    padding: 0 0.5rem;
+  .pageWelcome {
+    text-align: center;
+    p:first-child {
+      font-size: 2rem;
+      color: gold;
+    }
+    p:nth-child(2) {
+      color: red;
+    }
   }
   .pageJobs {
     .jobs {
       .job {
         background-color: #222;
-        padding: 1rem;
+        padding: 0.1rem 0.5rem;
         margin-bottom: 1rem;
 
         div {
@@ -41,6 +46,9 @@ body {
           a {
             color: rgb(176, 146, 91);
             font-size: 1.5rem;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
 
@@ -60,6 +68,7 @@ body {
           .found {
             color: green;
             background-color: rgb(6, 39, 6);
+
             a {
               color: rgb(114, 208, 114);
               text-decoration: underline;
@@ -93,8 +102,40 @@ body {
       }
     }
   }
+  .pageJobsLowdb {
+    .jobs {
+      .job {
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          button {
+            margin-right: 1rem;
+            background-color: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(185, 63, 63);
+            border: none;
+            background: none;
+            &:hover {
+              color: lighten(red, 10%);
+              transform: scale(1.2);
+              cursor: pointer;
+            }
+          }
+          a {
+            color: rgb(176, 146, 91);
+            font-size: 1.5rem;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .pageSkills {
-    padding: 0;
     word-break: break-word;
     white-space: pre-wrap;
     margin-top: 1rem;
@@ -108,6 +149,19 @@ body {
         }
         a {
           color: rgb(239, 239, 97);
+        }
+      }
+    }
+  }
+  .pageDashboard {
+    h2 {
+      padding: 0 0.5rem;
+    }
+    ul {
+      li {
+        a {
+          color: greenyellow;
+          text-decoration: underline;
         }
       }
     }
