@@ -5,7 +5,7 @@ export const PageDashboard = () => {
   const { jobsLowdb } = useContext(AppContext);
   return (
     <div className="pageDashboard">
-      <h2>todos:</h2>
+      <h2>Todos:</h2>
       <div className="todos">
         {jobsLowdb.map((jobLowdb) => {
           return (

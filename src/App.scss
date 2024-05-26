@@ -153,6 +153,46 @@ body {
       }
     }
   }
+  .pageSkillsLowdb {
+    .skills {
+      .skill {
+        .skillName {
+          margin: 0;
+          padding: 3px;
+          cursor: pointer;
+        }
+      }
+      .found {
+        background-color: rgb(9, 63, 9);
+        a {
+          color: green;
+        }
+      }
+      .missing {
+        background-color: rgb(91, 11, 11);
+        a {
+          color: tomato;
+        }
+      }
+      .row {
+        background-color: #222;
+        padding: 1px 5px;
+        border-radius: 5px;
+
+        .description {
+          font-style: italic;
+          color: #888;
+
+          a {
+            margin-left: 4px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
   .pageDashboard {
     h2 {
       padding: 0 0.5rem;

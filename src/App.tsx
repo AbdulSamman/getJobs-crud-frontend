@@ -5,6 +5,7 @@ import { PageDashboard } from "./pages/PageDashboard";
 import { PageSkills } from "./pages/PageSkills";
 import { PageJobsLowdb } from "./pages/PageJobsLowdb";
 import { PageWelcome } from "./pages/PageWelcome";
+import { PageSkillsLowdb } from "./pages/PageSkillsLowdb";
 
 const App = () => {
   return (
@@ -18,12 +19,15 @@ const App = () => {
         <NavLink to={"/jobs"}>Jobs</NavLink>
         <NavLink to={"/skills"}>Skills</NavLink>
         <NavLink to={"/jobsLowdb"}>JobsLowdb</NavLink>
+        <NavLink to={"/skillsLowdb"}>SkillsLowdb</NavLink>
       </nav>
       <Routes>
         <Route path="/dashboard" element={<PageDashboard />} />
         <Route path="/jobs" element={<PageJobs />} />
         <Route path="/skills" element={<PageSkills />} />
         <Route path="/jobsLowdb" element={<PageJobsLowdb />} />
+        <Route path="/skillsLowdb" element={<PageSkillsLowdb />} />
+
         <Route path="/welcome" element={<PageWelcome />} />
         <Route path="/" element={<Navigate to={"/welcome"} replace />} />
       </Routes>

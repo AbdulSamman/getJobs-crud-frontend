@@ -5,10 +5,13 @@ export interface IAppProvider {
 
 export interface IAppContext {
 
-rawJobs:IJobRaw[],
-rawSkills: { [key: string]: IRawSkill };
-jobsLowdb:IJobRaw[]
-deleteJob:(jobsLowdb:IJobRaw)=>void
+rawJobs:IJobRaw[];
+rawSkills: { [key: string]: ISkillsJson };
+jobsLowdb:IJobRaw[];
+deleteJob:(jobsLowdb:IJobRaw)=>void;
+skillsLowdb:ISkill[];
+handleToggleSkill:(skill:ISkill)=>void;
+
   }
 
 
@@ -29,17 +32,27 @@ export interface IJobRaw  {
 }
 
 
+export interface ISkillsJson{
+  idCode:string;
+  name:string;
+  url:string;
+  description:string;
 
+}
 
 
 
 export  interface IRawSkill {
-    idCode:string,
-    name:string,
-    url:string,
-    description:string
-}
+     idCode:string;
+     name:string;
+     url:string;
+     description:string;
+     total:number;
+ }
 
-export interface ISkill extends IRawSkill {
-  isOpen:boolean
+export interface ISkill {
+  skill:IRawSkill;
+  isOpen:boolean;
+  total:number;
+  lookUp:string
 }
